@@ -1,0 +1,22 @@
+{
+  "name": "gatelens-walkthrough",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "prepare-assets": "node scripts/prepare.mjs",
+    "test": "node --test test/movement.test.mjs",
+    "test:browser": "node test/browser.mjs",
+    "test:vision": "node test/vision-pixels.mjs",
+    "test:meta": "node test/meta-browser.mjs"
+  },
+  "dependencies": {
+    "@tesseract.js-data/eng": "1.0.0",
+    "pngjs": "7.0.0",
+    "tesseract.js": "7.0.0",
+    "three": "0.186.1"
+  },
+  "devDependencies": {
+    "playwright": "1.62.1"
+  }
+}

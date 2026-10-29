@@ -1,0 +1,8 @@
+[
+ {"id":"valid","label":"Dispatch / matching seal","flow":"compare","plate":"HZ27KLGP","trailer":"KT18NBGP","company":"Cedar Logistics","driver":"A. Morgan","destination":"Cold store B","expectedSeal":"CG-24081","sceneSeal":"CG-24081","condition":"intact"},
+ {"id":"mismatch","label":"Dispatch / wrong seal","flow":"compare","plate":"JR64PVGP","trailer":"RN62TXGP","company":"North Ridge Freight","driver":"L. Daniels","destination":"Distribution hub C","expectedSeal":"NX-70532","sceneSeal":"NX-70539","condition":"intact"},
+ {"id":"unreadable","label":"Dispatch / damaged label","flow":"compare","plate":"LT83RXGP","trailer":"BP43WKGP","company":"Delta Produce","driver":"S. Lee","destination":"Produce depot A","expectedSeal":"DP-38106","sceneSeal":"DP-38106","condition":"damaged"},
+ {"id":"missing","label":"Dispatch / no label","flow":"compare","plate":"FM52ZKGP","trailer":"VC27MRGP","company":"Harbour Transport","driver":"J. Brown","destination":"Export yard D","expectedSeal":"HT-69324","sceneSeal":"","condition":"missing"},
+ {"id":"arrival","label":"Arrival / record a seal","flow":"register","plate":"BW39STGP","trailer":"AL75DKGP","company":"Atlas Supply","driver":"R. Taylor","destination":"Receiving bay 2","expectedSeal":"","sceneSeal":"AR-58216","condition":"intact"},
+ {"id":"blocked","label":"Assignment blocked","flow":"compare","plate":"ZX84NRGP","trailer":"PQ56KLGP","company":"Cedar Logistics","driver":"M. Reed","destination":"Hold area","expectedSeal":"CG-91845","sceneSeal":"CG-91845","condition":"intact"}
+]

@@ -1,0 +1,182 @@
+{
+  "fixtureNotice": "Independently authored fictional records. This demo schema is not a production integration or authorization contract.",
+  "listOfEntries": [
+    {
+      "uid": "fixture-depot",
+      "type": "out",
+      "licence": "HZ27KLGP",
+      "name": "A. Morgan",
+      "appType": "atg",
+      "deviceName": "Depot / Dispatch exit",
+      "profileName": "Fleet / Perishables",
+      "company": "Cedar Logistics",
+      "isBlocked": false,
+      "blockedMessage": "",
+      "visitor": {
+        "name": "Fleet unit 041",
+        "company": "Cedar Logistics",
+        "category": "Fleet trucks",
+        "carLic": "HZ27KLGP",
+        "carLicSet": [
+          "HZ27KLGP"
+        ],
+        "isOnSite": true,
+        "visitorFields": {
+          "Fleet No": {
+            "key": "Fleet No",
+            "value": "041"
+          },
+          "MODEL": {
+            "key": "MODEL",
+            "value": "Refrigerated vehicle"
+          }
+        }
+      },
+      "carLicScans": {},
+      "customFields": {
+        "Type of Truck": "Refrigerated",
+        "Number Of Trailers": "1",
+        "Destination For CLDA 1": "Cold store B"
+      },
+      "customFieldsObjects": {
+        "fixture-driver": {
+          "type": "barcodeDriverLicScan",
+          "customFieldName": "Scan Drivers Lic",
+          "customFieldType": "Driver Lic Scan",
+          "driverLicScanInitials": "A.",
+          "driverLicScanLastName": "Morgan"
+        },
+        "fixture-trailer": {
+          "type": "barcodeCarLicScan",
+          "customFieldName": "Scan Trailer 1 Disk",
+          "customFieldType": "Car Lic Scan",
+          "carLicScanLicense": "KT18NBGP"
+        },
+        "fixture-seal": {
+          "type": "barcodePlain",
+          "customFieldName": "Scan Seal For CLDA 1",
+          "customFieldType": "Barcode",
+          "text": "CG-24081"
+        }
+      }
+    },
+    {
+      "uid": "fixture-depot",
+      "type": "out",
+      "licence": "JR64PVGP",
+      "name": "L. Daniels",
+      "appType": "atg",
+      "deviceName": "Depot / Dispatch exit",
+      "profileName": "Fleet / Perishables",
+      "company": "Cedar Logistics",
+      "isBlocked": false,
+      "blockedMessage": "",
+      "visitor": {
+        "name": "Fleet unit 052",
+        "company": "Cedar Logistics",
+        "category": "Fleet trucks",
+        "carLic": "JR64PVGP",
+        "carLicSet": [
+          "JR64PVGP"
+        ],
+        "isOnSite": true,
+        "visitorFields": {
+          "Fleet No": {
+            "key": "Fleet No",
+            "value": "052"
+          },
+          "MODEL": {
+            "key": "MODEL",
+            "value": "Refrigerated vehicle"
+          }
+        }
+      },
+      "carLicScans": {},
+      "customFields": {
+        "Type of Truck": "Refrigerated",
+        "Number Of Trailers": "1",
+        "Destination For CLDA 1": "Distribution bay 3"
+      },
+      "customFieldsObjects": {
+        "fixture-driver": {
+          "type": "barcodeDriverLicScan",
+          "customFieldName": "Scan Drivers Lic",
+          "customFieldType": "Driver Lic Scan",
+          "driverLicScanInitials": "L.",
+          "driverLicScanLastName": "Daniels"
+        },
+        "fixture-trailer": {
+          "type": "barcodeCarLicScan",
+          "customFieldName": "Scan Trailer 1 Disk",
+          "customFieldType": "Car Lic Scan",
+          "carLicScanLicense": "PL37RCGP"
+        },
+        "fixture-seal": {
+          "type": "barcodePlain",
+          "customFieldName": "Scan Seal For CLDA 1",
+          "customFieldType": "Barcode",
+          "text": "CG-24082"
+        }
+      }
+    },
+    {
+      "uid": "fixture-depot",
+      "type": "out",
+      "licence": "LT83RXGP",
+      "name": "S. Patel",
+      "appType": "atg",
+      "deviceName": "Depot / Dispatch exit",
+      "profileName": "Fleet / Perishables",
+      "company": "Cedar Logistics",
+      "isBlocked": true,
+      "blockedMessage": "Dispatch on hold. Contact the supervisor.",
+      "visitor": {
+        "name": "Fleet unit 063",
+        "company": "Cedar Logistics",
+        "category": "Fleet trucks",
+        "carLic": "LT83RXGP",
+        "carLicSet": [
+          "LT83RXGP"
+        ],
+        "isOnSite": true,
+        "visitorFields": {
+          "Fleet No": {
+            "key": "Fleet No",
+            "value": "063"
+          },
+          "MODEL": {
+            "key": "MODEL",
+            "value": "Refrigerated vehicle"
+          }
+        }
+      },
+      "carLicScans": {},
+      "customFields": {
+        "Type of Truck": "Refrigerated",
+        "Number Of Trailers": "1",
+        "Destination For CLDA 1": "Cold store A"
+      },
+      "customFieldsObjects": {
+        "fixture-driver": {
+          "type": "barcodeDriverLicScan",
+          "customFieldName": "Scan Drivers Lic",
+          "customFieldType": "Driver Lic Scan",
+          "driverLicScanInitials": "S.",
+          "driverLicScanLastName": "Patel"
+        },
+        "fixture-trailer": {
+          "type": "barcodeCarLicScan",
+          "customFieldName": "Scan Trailer 1 Disk",
+          "customFieldType": "Car Lic Scan",
+          "carLicScanLicense": "NS52VDGP"
+        },
+        "fixture-seal": {
+          "type": "barcodePlain",
+          "customFieldName": "Scan Seal For CLDA 1",
+          "customFieldType": "Barcode",
+          "text": "CG-24083"
+        }
+      }
+    }
+  ]
+}

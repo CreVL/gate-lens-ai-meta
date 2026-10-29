@@ -1,0 +1,47 @@
+# Local SDK research and verification artifacts
+.research/
+.artifacts/
+.tools/
+
+# Local credentials and machine configuration
+.env
+.env.*
+!.env.example
+**/local.properties
+**/key.properties
+*.jks
+*.keystore
+
+# Flutter / Android generated output
+**/.dart_tool/
+**/build/
+**/.gradle/
+**/.kotlin/
+**/.flutter-plugins-dependencies
+**/flutter_export_environment.sh
+
+# Editors
+.idea/
+*.iml
+
+# Browser walkthrough dependencies and generated local vendor assets
+**/node_modules/
+.pnpm-store/
+apps/simulator/public/vendor/
+*.exe
+
+# Distributable builds, local runtime output and OS files
+*.apk
+*.aab
+*.log
+*.pid
+*.hprof
+**/.DS_Store
+**/Thumbs.db
+**/coverage/
+**/test-results/
+**/playwright-report/
+
+# Release recordings are distributed separately from source history
+*.mp4
+*.webm

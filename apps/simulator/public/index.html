@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#292f2f">
+  <title>GateLens — Truck inspection</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="world" aria-label="First-person industrial checkpoint"></canvas>
+  <div class="vignette"></div>
+  <header class="topbar">
+    <div class="brand"><span class="brand-mark">GL<span></span></span><strong>GateLens</strong><span class="divider"></span><span class="eyebrow">FIELD SIMULATOR</span></div>
+    <div class="location"><span class="pulse"></span>DEPOT / EXIT INSPECTION <span class="muted">/ 01</span></div>
+    <button id="menu-toggle" class="subtle" aria-expanded="true">Controls <kbd>Esc</kbd></button>
+  </header>
+
+  <section id="menu" class="panel menu" aria-label="Walkthrough controls">
+    <div class="eyebrow mint">INTERACTIVE WALKTHROUGH <span class="version">01 / DEMO</span></div>
+    <h1>Every seal.<br>Every check.</h1>
+    <p class="intro">Check the trailer. Read the seal. Capture evidence.<br>Record an incident when the numbers differ.</p>
+    <button id="walk" class="primary walk">Enter checkpoint <span>↗</span></button>
+    <p id="pointer-hint" class="micro">Click to capture your mouse. Press Esc to release it.</p>
+    <div class="controls-grid">
+      <div><kbd>W A S D</kbd><span>Walk</span></div><div><kbd>Mouse</kbd><span>Look around</span></div>
+      <div><kbd>G</kbd><span>Go to seal</span></div><div><kbd>E</kbd><span>Inspect vehicle</span></div>
+      <div><kbd>← → ↵</kbd><span>Display actions</span></div><div><kbd>R</kbd><span>Return to start</span></div>
+    </div>
+    <div class="section-label">INSPECTION SCENARIO <span>1 — 6</span></div>
+    <div class="scenarios" role="group" aria-label="Arrival scenario">
+      <button data-scenario="valid" aria-pressed="true"><i class="dot valid"></i>Matching</button>
+      <button data-scenario="mismatch" aria-pressed="false"><i class="dot expired"></i>Mismatch</button>
+      <button data-scenario="unreadable" aria-pressed="false">3 · Damaged</button>
+      <button data-scenario="missing" aria-pressed="false">4 · No label</button>
+      <button data-scenario="arrival" aria-pressed="false">5 · Arrival</button>
+      <button data-scenario="blocked" aria-pressed="false">6 · Blocked</button>
+    </div>
+    <div class="menu-foot"><a href="/glasses" class="text-button">Official Meta display ↗</a><button id="audit-toggle" class="text-button">Activity log ↗</button></div>
+  </section>
+
+  <div id="reticle" aria-hidden="true"><span></span></div>
+  <div id="target" hidden><span>VEHICLE IN VIEW</span><strong id="distance">12 m</strong><kbd>E</kbd></div>
+  <div id="toast" role="status" aria-live="polite" hidden></div>
+
+  <aside id="hud" class="panel hud" aria-label="Glasses interface preview" hidden>
+    <div class="hud-top"><span class="eyebrow">GATELENS</span><span class="signal-bars">▂▄▆</span><span class="micro">DEMO</span></div>
+    <div class="hud-location">DEPOT / EXIT INSPECTION <span>01</span></div>
+    <div id="status-chip" class="status-chip valid">✓ ENTRY VALID</div>
+    <h2 id="licence">HZ27KLGP</h2><h3 id="step-title"></h3>
+    <p id="profile">EXIT / Truck inspection</p>
+    <div id="summary">
+      <div class="data-line"><span>Company</span><strong id="company"></strong></div>
+      <div class="data-line"><span>Driver</span><strong id="driver"></strong></div>
+      <div class="data-line"><span>Destination</span><strong id="destination"></strong></div>
+    </div>
+    <p id="decision-reason" class="reason"></p>
+    <div id="details" hidden>
+      <div class="data-line"><span>Vehicle</span><strong id="vehicle-model"></strong></div>
+      <div class="data-line"><span>Trailer</span><strong id="trailer"></strong></div>
+      <div class="data-line"><span>Seal</span><strong id="seal"></strong></div>
+      <div class="data-line"><span>Source</span><strong id="lpr-device"></strong></div>
+    </div>
+    <figure id="evidence" hidden><img id="evidence-photo" alt="Captured 3D view of the inspected trailer seal"><figcaption>3D scene evidence · attached to this inspection</figcaption></figure>
+    <p id="incident-id" class="micro" hidden></p>
+    <div id="hud-actions" class="hud-actions"></div>
+    <div class="hud-foot"><span>← → Navigate <span class="spacer">↵ Select</span></span><span id="barrier-status">● CLOSED</span></div>
+  </aside>
+
+  <aside id="audit" class="panel audit" hidden>
+    <div class="audit-heading"><div><div class="eyebrow mint">SESSION ACTIVITY</div><h2>Inspection log</h2></div><button id="audit-close" class="subtle" aria-label="Close log">×</button></div>
+    <p class="micro">Local demo session · Latest 100 events · Cleared on restart</p>
+    <ol id="audit-list"></ol>
+  </aside>
+
+  <footer class="bottom-bar">
+    <div class="mission"><span class="mission-number">01</span><div><span class="eyebrow">YOUR NEXT STEP</span><strong id="objective">Enter the checkpoint to begin</strong></div></div>
+    <div class="scene-meta"><span id="connection"><i class="dot expired"></i>Connecting</span><span>Local OCR · 3D photo</span><button id="hud-toggle" class="text-button">Hide display <kbd>H</kbd></button></div>
+  </footer>
+  <div id="fatal" class="fatal panel" role="alert" hidden><h2>Unable to start the scene</h2><p id="fatal-message"></p><p>Use desktop Chrome or Edge with hardware acceleration enabled.</p></div>
+  <script type="module" src="src/app.js"></script>
+</body>
+</html>

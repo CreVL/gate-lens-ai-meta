@@ -1,0 +1,13 @@
+/* Local composition adapter for Meta Simulator 1.0.0. The extension stays untouched. */
+#gatelens-world{position:fixed!important;left:var(--mdcs-sidebar-w,344px)!important;top:76px!important;width:calc(100vw - var(--mdcs-sidebar-w,344px))!important;height:calc(100vh - 76px)!important;z-index:-1;display:none;outline:none}
+html.mdcs-active #gatelens-world{display:block;filter:blur(var(--mdcs-blur,0px)) brightness(var(--mdcs-bg-brightness,1))}
+#gatelens-controls{position:fixed;left:calc(var(--mdcs-sidebar-w,344px) + 20px);bottom:20px;z-index:2147483645;font:12px/1.6 "Segoe UI",sans-serif;color:#f8f8f8;background:#323333f2;border:1px solid #66c3c188;border-radius:15px;padding:12px 16px;display:none;max-width:550px}
+html.mdcs-active #gatelens-controls{display:block}
+#gatelens-controls button{background:#b4e6e4;border:0;border-radius:30px;color:#173a38;padding:8px 16px;cursor:pointer;margin-right:12px;font:inherit}
+#gatelens-controls small{display:block;color:#b4e6e4;margin-top:6px}
+#gatelens-controls a{color:#b4e6e4}
+#gatelens-reticle{position:fixed;left:calc((100vw + var(--mdcs-sidebar-w,344px))/2);top:calc((100vh + 76px)/2);width:5px;height:5px;background:#fff9;border-radius:50%;pointer-events:none;z-index:0;display:none}
+html.gatelens-walking #gatelens-reticle{display:block}
+/* Keep the real display at its official 600×600 size. Background covers the stage only. */
+html.mdcs-active::before{visibility:hidden}
+html.mdcs-active #mdcs-webcam-video,html.mdcs-active [id^="mdcs-animate-"]{visibility:hidden}
